@@ -193,7 +193,7 @@ void tampil(void){
 
 
     glPushMatrix();
-    glColor4f(0.95,0.75,0.95,0.95);
+    glColor4f(0.0,0.5,0.8,0.4);
     glTranslatef(77.75, 8.0, 15.01);
     glRotatef(270.0, 0.0, 0.0, 0.01);
     setengahLingkaran(); //kaca setengah lingkaran
@@ -343,7 +343,7 @@ void tampil(void){
     baliho();
     baliho2();
     baliho3();
-    
+
 
     //========================================================================================
 
@@ -1671,7 +1671,7 @@ void tingkat_3()
 
     //belakang
     glBegin(GL_QUADS);
-    glColor3f(0.9,0.0,0.0);
+    glColor3f(0.9,0.7,0.6);
     glVertex3f(88.0, 8.0, 0.0);
     glVertex3f(88.0, 11.0, 0.0);
     glVertex3f(98.0, 11.0, 0.0);
@@ -1690,7 +1690,7 @@ void tingkat_3()
 
     //miring depan
     glBegin(GL_QUADS);
-    glColor3f(0.9,0.0,0.0);
+    glColor3f(0.92,0.72,0.65);
     glVertex3f(88.0, 12.0, 14.5);
     glVertex3f(88.0, 11.0, 15.5);
     glVertex3f(98.0, 11.0, 15.5);
@@ -1700,7 +1700,7 @@ void tingkat_3()
     for(int i=0 ; i<2 ;i++){
         //segitiga polygon
         glBegin(GL_POLYGON);
-        glColor3f(0.9,0.0,0.0);
+        glColor3f(0.9,0.7,0.5);
         glVertex3f(98.0-i*10, 12.0, 14.5);
         glVertex3f(98.0-i*10, 11.0, 14.5);
         glVertex3f(98.0-i*10, 8.0, 14.5);
@@ -1711,7 +1711,7 @@ void tingkat_3()
 
     //miring belakang
     glBegin(GL_QUADS);
-    glColor3f(0.9,0.0,0.0);
+    glColor3f(0.9,0.7,0.6);
     glVertex3f(88.0, 12.0, 1.0);
     glVertex3f(88.0, 11.0, 0.0);
     glVertex3f(98.0, 11.0, 0.0);
@@ -1720,7 +1720,7 @@ void tingkat_3()
 
     //segitiga polygon
         glBegin(GL_POLYGON);
-        glColor3f(0.9,0.0,0.0);
+        glColor3f(0.9,0.7,0.5);
         glVertex3f(88.0, 12.0, 1.0);
         glVertex3f(88.0, 11.0, 1.0);
         glVertex3f(88.0, 8.0, 1.0);
@@ -1857,7 +1857,7 @@ void tambah_tingkat_3()
 
     //tambahh atap
     glBegin(GL_QUADS);
-    glColor3f(1.0,0.0,0.0);
+    glColor3f(0.0,0.0,0.0);
     glVertex3f(139.0, 11.0, 44.0);
     glVertex3f(141.5, 11.0, 44.0);
     glVertex3f(141.5, 12.0, 41.5);
@@ -1866,7 +1866,7 @@ void tambah_tingkat_3()
 
     //tambahh atap2
     glBegin(GL_QUADS);
-    glColor3f(1.0,0.0,0.0);
+    glColor3f(0.0,0.0,0.0);
     glVertex3f(139.0, 11.0, 13.0);
     glVertex3f(141.5, 12.0, 13.0);
     glVertex3f(141.5, 12.0,10.5);
@@ -3864,7 +3864,7 @@ void tengah_tingkat_2(){
 
     //depan
     glBegin(GL_QUADS);
-    glColor4f(0.95,0.75,0.95,0.95);
+    glColor4f(0.0,0.5,0.8,0.4);
     glVertex3f(67.5, 4.0, 15.0);
     glVertex3f(67.5, 8.0, 15.0);
     glVertex3f(88.0, 8.0, 15.0);
@@ -3937,7 +3937,7 @@ void setengahLingkaran(){
 }
 
 void lisKacaDome(){
-    glColor4f(0.4, 0.4, 0.4, 0.7);
+    glColor3f(15/255.f,76/255.f,98/255.f);
     glBegin(GL_QUADS);
         glVertex3f(67.5, 5.0, 15.02);
         glVertex3f(67.5, 6.0, 15.02);
@@ -4419,7 +4419,6 @@ void matahari(){
     glutSolidSphere(7, 100, 100);
     glPopMatrix();
 }
-
 
 void kursi_1(){
     glBegin(GL_QUADS); //kiri
@@ -5564,7 +5563,7 @@ glBegin(GL_QUADS);
 
      //kanan 3
     glBegin(GL_QUADS);
-    glColor3f(1.0, 0.0, 0.0);
+    glColor3f(0.9,0.7,0.6);
     glVertex3f(57.0, 12.0, 14.0);
     glVertex3f(57.0, 11.0, 15.0);
     glVertex3f(57.0, 8.0, 15.0);
@@ -5573,19 +5572,19 @@ glBegin(GL_QUADS);
 
     //kanan 4
     glBegin(GL_QUADS);
-    glColor3f(1.0, 0.0, 0.0);
-    glVertex3f(67.0, 12.0, 14.0);
-    glVertex3f(67.0, 11.0, 15.0);
-    glVertex3f(67.0, 8.0, 15.0);
-    glVertex3f(67.0, 8.0, 14.0);
+    glColor3f(0.9,0.7,0.6);
+    glVertex3f(67.5, 12.0, 14.0);
+    glVertex3f(67.5, 11.0, 15.0);
+    glVertex3f(67.5, 8.0, 15.0);
+    glVertex3f(67.5, 8.0, 14.0);
     glEnd();
 
      //kanan 5
     glBegin(GL_QUADS);
-    glColor3f(1.0, 0.0, 0.0);
+    glColor3f(0.92,0.72,0.65);
     glVertex3f(57.0, 12.0, 14.0);
-    glVertex3f(67.0, 12.0, 14.0);
-    glVertex3f(67.0, 11.0, 15.0);
+    glVertex3f(67.5, 12.0, 14.0);
+    glVertex3f(67.5, 11.0, 15.0);
     glVertex3f(57.0,11.0, 15.0);
     glEnd();
 }
