@@ -72,6 +72,7 @@ void tabungmiring();
     void paktankursitv();
 
 void AC();
+void taneman();
 
 //calvin
 void tingkat1_kiri();
@@ -209,9 +210,9 @@ void tampil(void){
     //=======================================tv kursi============================================
     glPushMatrix();
     glTranslatef(15.0,0.0,6.0);
-    glScalef(0.05,0.05,0.05);
+    glScalef(0.07,0.06,0.05);
     for(int i=0; i<5; i++){
-        glTranslatef(150.0,0.0,0.0);
+        glTranslatef(110.0,0.0,0.0);
         paktankursitv();
     }
     glPopMatrix();
@@ -219,9 +220,9 @@ void tampil(void){
     glPushMatrix();
     glRotatef(270.0,0.0,2700.0,0.0);
     glTranslatef(14.0,0.0,-6.0);
-    glScalef(0.05,0.05,0.05);
+    glScalef(0.07,0.06,0.05);
     for(int i=0; i<4; i++){
-        glTranslatef(150.0,0.0,0.0);
+        glTranslatef(110.0,0.0,0.0);
         paktankursitv();
     }
     glPopMatrix();
@@ -253,6 +254,25 @@ void tampil(void){
     for(int i=0;i<3;i++){
     glTranslatef(-20.0,0.0,0.0);
     AC();
+    }
+    glPopMatrix();
+
+    glPushMatrix();
+    glScalef(0.45,0.9,0.45);
+    glTranslatef(28.5,0.0,48.5);
+    for(int i=0;i<5;i++){
+        glTranslatef(0.0,0.0,10.0);
+        taneman();
+    }
+    glPopMatrix();
+
+    glPushMatrix();
+    glScalef(0.45,0.9,0.45);
+    glRotatef(-90.0,0.0,-90.0,0.0);
+    glTranslatef(-28.5,0.0,48.5);
+    for(int i=0;i<7;i++){
+        glTranslatef(0.0,0.0,10.0);
+        taneman();
     }
     glPopMatrix();
 
@@ -6268,6 +6288,91 @@ void idle(){
         yrot += 0.4f;
     }
     glutPostRedisplay();
+}
+
+void tanemandalem(){
+    glBegin(GL_QUADS);//tanah
+    glColor3f(0.6,0.4,0.2);
+    glVertex3f(-0.5, 0.3, 0.5);
+    glVertex3f( 0.5, 0.3, 0.5);
+    glVertex3f( 0.5, 0.3,-0.5);
+    glVertex3f(-0.5, 0.3,-0.5);
+    glEnd();
+
+    glBegin(GL_QUADS);//kanan
+    glColor3f(1.0,1.0,1.0);
+    glVertex3f( 0.5, 0.0, 0.5);
+    glVertex3f( 0.5, 0.4, 0.5);
+    glVertex3f( 0.5, 0.4,-0.5);
+    glVertex3f( 0.5, 0.0,-0.5);
+    glEnd();
+
+    glBegin(GL_QUADS);//kiri
+    glColor3f(1.0,1.0,1.0);
+    glVertex3f(-0.5, 0.0, 0.5);
+    glVertex3f(-0.5, 0.4, 0.5);
+    glVertex3f(-0.5, 0.4,-0.5);
+    glVertex3f(-0.5, 0.0,-0.5);
+    glEnd();
+
+    glBegin(GL_QUADS);//dpn
+    glColor3f(1.0,1.0,1.0);
+    glVertex3f(-0.5, 0.4, 0.5);
+    glVertex3f( 0.5, 0.4, 0.5);
+    glVertex3f( 0.5, 0.0, 0.5);
+    glVertex3f(-0.5, 0.0, 0.5);
+    glEnd();
+
+    glBegin(GL_QUADS);//blk
+    glColor3f(1.0,1.0,1.0);
+    glVertex3f(-0.5, 0.4,-0.5);
+    glVertex3f( 0.5, 0.4,-0.5);
+    glVertex3f( 0.5, 0.0,-0.5);
+    glVertex3f(-0.5, 0.0,-0.5);
+    glEnd();
+}
+
+void tanemanatas(){
+    glBegin(GL_QUADS);//top
+    glColor3f(0.2,0.9,0.2);
+    glVertex3f(-0.3, 1.0, 0.3);
+    glVertex3f( 0.3, 1.0, 0.3);
+    glVertex3f( 0.3, 1.0,-0.3);
+    glVertex3f(-0.3, 1.0,-0.3);
+    glEnd();
+
+    glBegin(GL_QUADS);//kanan
+    glVertex3f( 0.3, 0.3, 0.3);
+    glVertex3f( 0.3, 1.0, 0.3);
+    glVertex3f( 0.3, 1.0,-0.3);
+    glVertex3f( 0.3, 0.3,-0.3);
+    glEnd();
+
+    glBegin(GL_QUADS);//kiri
+    glVertex3f(-0.3, 0.3, 0.3);
+    glVertex3f(-0.3, 1.0, 0.3);
+    glVertex3f(-0.3, 1.0,-0.3);
+    glVertex3f(-0.3, 0.3,-0.3);
+    glEnd();
+
+    glBegin(GL_QUADS);//dpn
+    glVertex3f(-0.3, 1.0, 0.3);
+    glVertex3f( 0.3, 1.0, 0.3);
+    glVertex3f( 0.3, 0.3, 0.3);
+    glVertex3f(-0.3, 0.3, 0.3);
+    glEnd();
+
+    glBegin(GL_QUADS);//blk
+    glVertex3f(-0.3, 1.0,-0.3);
+    glVertex3f( 0.3, 1.0,-0.3);
+    glVertex3f( 0.3, 0.3,-0.3);
+    glVertex3f(-0.3, 0.3,-0.3);
+    glEnd();
+}
+
+void taneman(){
+    tanemanatas();
+    tanemandalem();
 }
 
 void keyboard(unsigned char key, int x, int y){
