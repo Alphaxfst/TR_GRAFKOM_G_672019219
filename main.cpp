@@ -67,10 +67,6 @@ void fondasi();
 void atap();
 void gedungtambahan();
 void scalegedung();
-void tingkat1_kiri_gedungA();
-void tingkat2_kiri_gedungA();
-void tingkat3_kiri_gedungA();
-void gedungA();
 void tabung();
 void tabungmiring();
 
@@ -134,7 +130,7 @@ int main(int argc, char **argv){
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
     glutInitWindowSize(800,600);
     glutInitWindowPosition(250,80);
-    glutCreateWindow("ALPHA FAUSTA IKRAR SETYADI - 672019219");
+    glutCreateWindow("Select Citywalk Mall India");
     init();
 
     glutTimerFunc(0, timer, 0);

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1625808177 source:e:\tr\tr_grafkom_g_672019219\main.cpp
+1625810477 source:e:\tr\tr_grafkom_g_672019219\main.cpp
 	<windows.h>
 	<stdlib.h>
 	<GL/glut.h>
