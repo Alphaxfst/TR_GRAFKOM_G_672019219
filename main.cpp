@@ -1,3 +1,8 @@
+//Calvin Satya Adi Kristiantoro     672019168
+//Johannes Satria Putra Kase        672019188
+//Alim Budhi Utomo                  672019213
+//Alpha Fausta Ikrar Setyadi        672019219
+
 #include<windows.h>
 #include <stdlib.h>
 #include<GL/glut.h>
